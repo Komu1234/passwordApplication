@@ -30,9 +30,9 @@ public class UserDetails {
     }
 
     private String generatePassword(String firstName, String middleName, String lastName) {
-        String firstTwo = firstName.length() >= 2 ? firstName.substring(0, 2) : firstName;
-        String middleTwo = middleName.length() >= 2 ? middleName.substring(0, 2) : middleName;
-        String lastTwo = lastName.length() >= 2 ? lastName.substring(0, 2) : lastName;
+        String firstTwo = firstName.substring(0, 2);
+        String middleTwo = middleName.substring(0, 2);
+        String lastTwo = lastName.substring(0, 2);
         int randomDigits = new Random().nextInt(900) + 100; // Generates a 3-digit random number
         return firstTwo + middleTwo + lastTwo + randomDigits;
     }
